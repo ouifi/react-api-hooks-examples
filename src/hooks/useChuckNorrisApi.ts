@@ -7,7 +7,7 @@ export type ChuckNorrisJoke = {
   joke: string
 }
 
-export const useChuckNorris = () => {
+export const useChuckNorrisApi = () => {
   const { get } = useApi();
 
   const [data, setData] = useState<ChuckNorrisJoke>()

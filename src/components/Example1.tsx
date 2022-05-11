@@ -1,8 +1,8 @@
 import React from 'react';
-import { useChuckNorris } from 'hooks/useChuckNorris';
+import { useChuckNorrisApi } from 'hooks/useChuckNorrisApi';
 
 export const Example1 = () => {
-  const { joke } = useChuckNorris();
+  const { joke } = useChuckNorrisApi();
 
   return <p>
     {
