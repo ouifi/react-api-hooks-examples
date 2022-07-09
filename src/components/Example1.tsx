@@ -1,12 +1,12 @@
 import React from 'react';
-import { useChuckNorrisApi } from 'hooks/useChuckNorrisApi';
+import { useChuckNorrisApi } from 'services/ChuckNorris';
 
 export const Example1 = () => {
-  const { joke } = useChuckNorrisApi();
+  const { data: joke } = useChuckNorrisApi();
 
   return <p>
     {
       joke && `Joke #${joke.id}: ${joke.joke}`
     }
   </p>
-}
+};

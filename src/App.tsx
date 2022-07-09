@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { Example1 } from 'components/Example1';
 import { AuthContext, AuthProvider } from 'context/authContext';
 
@@ -26,36 +27,38 @@ const Protector = ({ children }: { children: React.ReactNode }) => {
   </>;
 }
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <AuthProvider>
-      <div className="App">
-        <header className="App-header">
-          <Protector>
-            <img src={logo} className="App-logo" alt="logo" />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-            <Example1 />
-          </Protector>
-        </header>
-      </div>
-    </AuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <div className="App">
+          <header className="App-header">
+            <Protector>
+              <img src={logo} className="App-logo" alt="logo" />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+              <Example1 />
+            </Protector>
+          </header>
+        </div>
+      </AuthProvider>
+    </QueryClientProvider>
   );
 }
 
