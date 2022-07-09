@@ -23,21 +23,5 @@ export const useChuckNorrisApi = () => {
     [get]
   );
 
-  return useQuery<unknown, unknown, ChuckNorrisJoke>("chucknorris", fetchChuckNorrisJoke);
-    
-  // const [data, setData] = useState<ChuckNorrisJoke>();
-  // useEffect(
-  //   () => {
-  //     get("http://api.icndb.com/jokes/random")
-  //       .then(API.isOk)
-  //       .then(API.asJSON)
-  //       .then(
-  //         (d) => {
-  //           setData(d.value);
-  //         }
-  //       );
-  //   },
-  //   [get]
-  // );
-  // return { joke: data };
+  return useQuery<unknown, unknown, ChuckNorrisJoke>("chucknorris", fetchChuckNorrisJoke, { staleTime: Infinity });
 }
