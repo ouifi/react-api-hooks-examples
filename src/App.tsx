@@ -34,6 +34,24 @@ function App() {
           <Protector>
             <img src={logo} className="App-logo" alt="logo" />
             <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
+            <Example1 />
           </Protector>
         </header>
       </div>
