@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useQuery } from 'react-query';
 import { useApi } from 'hooks/useApi';
 import API from 'services/api';
@@ -6,7 +6,7 @@ import API from 'services/api';
 export type ChuckNorrisJoke = {
   id: number;
   joke: string
-}
+};
 
 export const useChuckNorrisApi = () => {
   const { get } = useApi();
@@ -24,4 +24,4 @@ export const useChuckNorrisApi = () => {
   );
 
   return useQuery<unknown, unknown, ChuckNorrisJoke>("chucknorris", fetchChuckNorrisJoke, { staleTime: Infinity });
-}
+};
